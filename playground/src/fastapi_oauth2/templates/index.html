@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="card">
+    <h5 class="card-header">Choose an OAuth flow</h5>
+    <div class="card-body text-center">
+        <a href="{{authorization_code_uri}}"
+            class="btn btn-primary">Authorization code Flow</a>
+        <a href="{{implicit_flow_uri}}"
+            class="btn btn-primary">Implicit flow</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block body %}
+{% if request.query_params.code %}
+<div class="card">
+    <h5 class="card-header">Exchange the Authorization Code</h5>
+    <div class="card-body">
+        <p>The user was redirected back to the client, and you'll notice a few additional query parameters in the URL:</p>
+        <div class="card">
+            <div class="card-body">
+                <code id="search"></code>
+            </div>
+        </div>
+        <p>You need to first verify that the state parameter matches the value stored in this user's session so that you protect against CSRF attacks.</p>
+        <p>Now you're ready to exchange the authorization code for an access token. Try this POST request from your terminal to get an access token:</p>
+
+        <div class="card">
+            <div class="card-body">
+                <code>
+                    curl -X POST "http://127.0.0.1:8000/token" -H  "accept: application/json" \<br />
+                    -u {{credentials.client_id}}:{{credentials.client_secret}} \<br />
+                    -d "grant_type=authorization_code" \<br />
+                    -d "code={{request.query_params.code}}" \<br />
+                    -d "redirect_uri={{credentials.redirect_uri}}" \<br />
+                    -d "scope={{request.query_params.scope}}"<br />
+                </code>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+
+<div class="card">
+    <h5 class="card-header">Verify the state parameter</h5>
+    <div class="card-body">
+        <p>The user was redirected back to the client, and you'll notice there is now a fragment component in the URL that contains the access token as well as some other information:</p>
+        <div class="card">
+            <div class="card-body">
+                <code id="fragment"></code>
+            </div>
+        </div>
+        <p>You need to first verify that the state parameter matches the value stored in this user's session so that you protect against CSRF attacks.</p>
+    </div>
+</div>
+
+{% endif %}
+<br />
+<div class="text-center">
+<a href="/" class="btn btn-primary">← Back to Flows</a>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+    $(function() {
+        $("#fragment").append(window.location.hash);
+        $("#search").append(window.location.search);
+    });
+</script>
+{% endblock %}
