@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>aioauth.types &mdash; aioauth 0.1.6 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> aioauth
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">🔐 aioauth</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../sections/understanding/plug_and_play.html">Plug-and-Play</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../sections/using/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sections/using/server_database.html">Server &amp; Database</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../sections/examples/aiohttp.html">Aiohttp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sections/examples/fastapi.html">FastAPI</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../sections/documentation/base/index.html">Base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sections/documentation/config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sections/documentation/constances.html">Constances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sections/documentation/errors.html">Errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sections/documentation/grant_type.html">Grant Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sections/documentation/models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sections/documentation/requests.html">Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sections/documentation/response_type.html">Response Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sections/documentation/responses.html">Responses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sections/documentation/server.html">Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sections/documentation/structures.html">Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sections/documentation/types.html">Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sections/documentation/utils.html">Utils</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">aioauth</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>aioauth.types</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for aioauth.types</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">.. code-block:: python</span>
+
+<span class="sd">    from aioauth import types</span>
+
+<span class="sd">Containers that contain constants used throughout the project.</span>
+
+<span class="sd">----</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+
+
+<div class="viewcode-block" id="ErrorType"><a class="viewcode-back" href="../../sections/documentation/types.html#aioauth.errors.ErrorType">[docs]</a><span class="k">class</span> <span class="nc">ErrorType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Error types.&quot;&quot;&quot;</span>
+
+    <span class="n">INVALID_REQUEST</span> <span class="o">=</span> <span class="s2">&quot;invalid_request&quot;</span>
+    <span class="n">INVALID_CLIENT</span> <span class="o">=</span> <span class="s2">&quot;invalid_client&quot;</span>
+    <span class="n">INVALID_GRANT</span> <span class="o">=</span> <span class="s2">&quot;invalid_grant&quot;</span>
+    <span class="n">INVALID_SCOPE</span> <span class="o">=</span> <span class="s2">&quot;invalid_scope&quot;</span>
+    <span class="n">UNAUTHORIZED_CLIENT</span> <span class="o">=</span> <span class="s2">&quot;unauthorized_client&quot;</span>
+    <span class="n">UNSUPPORTED_GRANT_TYPE</span> <span class="o">=</span> <span class="s2">&quot;unsupported_grant_type&quot;</span>
+    <span class="n">UNSUPPORTED_RESPONSE_TYPE</span> <span class="o">=</span> <span class="s2">&quot;unsupported_response_type&quot;</span>
+    <span class="n">INSECURE_TRANSPORT</span> <span class="o">=</span> <span class="s2">&quot;insecure_transport&quot;</span>
+    <span class="n">MISMATCHING_STATE</span> <span class="o">=</span> <span class="s2">&quot;mismatching_state&quot;</span>
+    <span class="n">METHOD_IS_NOT_ALLOWED</span> <span class="o">=</span> <span class="s2">&quot;method_is_not_allowed&quot;</span>
+    <span class="n">SERVER_ERROR</span> <span class="o">=</span> <span class="s2">&quot;server_error&quot;</span>
+    <span class="n">TEMPORARILY_UNAVAILABLE</span> <span class="o">=</span> <span class="s2">&quot;temporarily_unavailable&quot;</span></div>
+
+
+<div class="viewcode-block" id="GrantType"><a class="viewcode-back" href="../../sections/documentation/types.html#aioauth.errors.GrantType">[docs]</a><span class="k">class</span> <span class="nc">GrantType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Grant types.&quot;&quot;&quot;</span>
+
+    <span class="n">TYPE_AUTHORIZATION_CODE</span> <span class="o">=</span> <span class="s2">&quot;authorization_code&quot;</span>
+    <span class="n">TYPE_PASSWORD</span> <span class="o">=</span> <span class="s2">&quot;password&quot;</span>
+    <span class="n">TYPE_CLIENT_CREDENTIALS</span> <span class="o">=</span> <span class="s2">&quot;client_credentials&quot;</span>
+    <span class="n">TYPE_REFRESH_TOKEN</span> <span class="o">=</span> <span class="s2">&quot;refresh_token&quot;</span></div>
+
+
+<div class="viewcode-block" id="ResponseType"><a class="viewcode-back" href="../../sections/documentation/types.html#aioauth.errors.ResponseType">[docs]</a><span class="k">class</span> <span class="nc">ResponseType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Response types.&quot;&quot;&quot;</span>
+
+    <span class="n">TYPE_TOKEN</span> <span class="o">=</span> <span class="s2">&quot;token&quot;</span>
+    <span class="n">TYPE_CODE</span> <span class="o">=</span> <span class="s2">&quot;code&quot;</span></div>
+
+
+<div class="viewcode-block" id="EndpointType"><a class="viewcode-back" href="../../sections/documentation/types.html#aioauth.errors.EndpointType">[docs]</a><span class="k">class</span> <span class="nc">EndpointType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Endpoint types.&quot;&quot;&quot;</span>
+
+    <span class="n">GRANT_TYPE</span> <span class="o">=</span> <span class="s2">&quot;grant_type&quot;</span>
+    <span class="n">RESPONSE_TYPE</span> <span class="o">=</span> <span class="s2">&quot;response_type&quot;</span></div>
+
+
+<div class="viewcode-block" id="RequestMethod"><a class="viewcode-back" href="../../sections/documentation/types.html#aioauth.errors.RequestMethod">[docs]</a><span class="k">class</span> <span class="nc">RequestMethod</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Request types.&quot;&quot;&quot;</span>
+
+    <span class="n">GET</span> <span class="o">=</span> <span class="s2">&quot;GET&quot;</span>
+    <span class="n">POST</span> <span class="o">=</span> <span class="s2">&quot;POST&quot;</span></div>
+
+
+<div class="viewcode-block" id="CodeChallengeMethod"><a class="viewcode-back" href="../../sections/documentation/types.html#aioauth.errors.CodeChallengeMethod">[docs]</a><span class="k">class</span> <span class="nc">CodeChallengeMethod</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Code challenge types.&quot;&quot;&quot;</span>
+
+    <span class="n">PLAIN</span> <span class="o">=</span> <span class="s2">&quot;plain&quot;</span>
+    <span class="n">S256</span> <span class="o">=</span> <span class="s2">&quot;S256&quot;</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright .
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
